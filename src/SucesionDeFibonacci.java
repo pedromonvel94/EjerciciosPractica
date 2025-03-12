@@ -7,7 +7,23 @@
  */
 
 public class SucesionDeFibonacci {
-    //int[] Sucesion = new int[50];
+    public static void main(String[] args){
+        long[] sucesion = new long[50];
 
+        sucesion[0] = 0;
+        sucesion[1] = 1;
 
+        fibonacci(sucesion);
+
+        for(long num : sucesion){
+            System.out.println(num);
+        }
+
+    }
+
+    public static void fibonacci(long[] sucesion){
+        for (int i = 2; i < 50; i++) {
+            sucesion[i] = sucesion[i - 1] + sucesion[i - 2];
+        }
+    }
 }

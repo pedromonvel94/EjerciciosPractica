@@ -20,7 +20,8 @@ public class Anagrama {
         System.out.println("Coloca la segunda palabra: ");
         String palabra2 = scanner.nextLine();
 
-        /*Ya habiendo creadotodo el codigo del modulo esAnagrama lo que hago es verificar si el resultado dio true para imprimir el resultado*/
+        /*Ya habiendo creadotodo el codigo del modulo esAnagrama lo que hago es verificar si el resultado dio true para
+        imprimir el resultado*/
         if (esAnagrama(palabra1, palabra2) == true){
             System.out.println(palabra1 + " y " + palabra2 + " son anagramas");
         } else {
