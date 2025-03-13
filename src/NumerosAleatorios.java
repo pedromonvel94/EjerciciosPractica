@@ -12,6 +12,7 @@ public class NumerosAleatorios {
         //también la suma total (los puntos que suman entre los tres dados).
 
         System.out.println("Ejercicio 1: suma de dados");
+
         int sumaDados = 0;
 
         for(int i = 1; i < 4; i++){
@@ -24,6 +25,7 @@ public class NumerosAleatorios {
 
         System.out.println(sumaDados);
 
+        System.out.println(" ");
 
         /*
         * Realiza un programa que muestre al azar el nombre de una carta de la baraja
@@ -33,6 +35,8 @@ public class NumerosAleatorios {
         1). Para convertir un número en una cadena de caracteres podemos usar
         String.valueOf(n).
         * */
+
+        System.out.println("Ejercicio 2: carta al azar baraja francesa");
 
         int numeroPaloBaraja = (int)(Math.random() * 4) + 1;
         int cartaMostrada = (int)(Math.random() * 13) + 1;
@@ -70,5 +74,24 @@ public class NumerosAleatorios {
         }
 
         System.out.println("La carta que salio es: " + numeroCarta + " " + paloBaraja);
+
+        System.out.println(" ");
+
+        /*
+        * Igual que el ejercicio anterior pero con la baraja española. Se utilizará la baraja
+        * de 40 cartas: 2, 3, 4, 5, 6, 7, sota, caballo, rey y as.
+        */
+
+        System.out.println("Ejercicio 3: carta al azar baraja española");
+
+        String[] numeroDeCarta = {"As", "2", "3", "4", "5", "6", "7", "sota", "caballo", "rey" };
+        String[] paloDeBaraja = {"de Picas", "de Corazones", "de Diamantes", "de Tréboles"};
+
+        int paloCarta = (int)(Math.random() * 3);
+        int numCarta = (int)(Math.random() * 9);
+
+        System.out.println("La carta que salio es: " + numeroDeCarta[numCarta] + " " + paloDeBaraja[paloCarta]);
+
+        System.out.println(" ");
     }
 }
