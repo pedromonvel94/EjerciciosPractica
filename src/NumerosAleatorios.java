@@ -3,12 +3,15 @@
 * Genera un número con decimales (de tipo double) en el intervalo [0 - 1)
 */
 
-//Escribe un programa que muestre la tirada de tres dados. Se debe mostrar
-//también la suma total (los puntos que suman entre los tres dados).
+
 
 public class NumerosAleatorios {
     public static void main(String[] args){
 
+        //Escribe un programa que muestre la tirada de tres dados. Se debe mostrar
+        //también la suma total (los puntos que suman entre los tres dados).
+
+        System.out.println("Ejercicio 1: suma de dados");
         int sumaDados = 0;
 
         for(int i = 1; i < 4; i++){
@@ -21,5 +24,51 @@ public class NumerosAleatorios {
 
         System.out.println(sumaDados);
 
+
+        /*
+        * Realiza un programa que muestre al azar el nombre de una carta de la baraja
+        francesa. Esta baraja está dividida en cuatro palos: picas, corazones, diamantes
+        y tréboles. Cada palo está formado por 13 cartas, de las cuales 9 cartas son
+        numerales y 4 literales: 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K y A (que sería el
+        1). Para convertir un número en una cadena de caracteres podemos usar
+        String.valueOf(n).
+        * */
+
+        int numeroPaloBaraja = (int)(Math.random() * 4) + 1;
+        int cartaMostrada = (int)(Math.random() * 13) + 1;
+        String numeroCarta;
+        String paloBaraja = "";
+
+        switch (numeroPaloBaraja){
+            case 1 :
+                paloBaraja = "de Pica";
+                break;
+            case 2 :
+                paloBaraja = "de Corazones";
+                break;
+            case 3 :
+                paloBaraja = "de Diamantes";
+                break;
+            case 4 :
+                paloBaraja = "de Treboles";
+                break;
+            default:
+                System.out.println("se presenta un error en el codigo.");
+                break;
+        }
+
+        if(cartaMostrada == 11){
+            numeroCarta = "J";
+        } else if (cartaMostrada == 12){
+            numeroCarta = "Q";
+        } else if (cartaMostrada == 13){
+            numeroCarta = "K";
+        } else if (cartaMostrada == 1){
+            numeroCarta = "As";
+        }else {
+            numeroCarta = String.valueOf(cartaMostrada);
+        }
+
+        System.out.println("La carta que salio es: " + numeroCarta + " " + paloBaraja);
     }
 }
